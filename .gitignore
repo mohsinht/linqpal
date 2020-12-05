@@ -105,3 +105,6 @@ dist
 
 # Database configs:
 /backend/config/database.js
+
+# Secret Key
+/backend/config/secret_key.js

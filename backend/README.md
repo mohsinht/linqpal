@@ -1,2 +1,2 @@
-# manager-be
+# linqpal-be
 Backend for Linqpal Test Service

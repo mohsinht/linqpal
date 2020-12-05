@@ -10,20 +10,33 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js | bunyan",
-    "server-start": "nodemon server.js | bunyan --output short --color"
+    "migrate": "sequelize db:migrate | bunyan",
+    "seed": "sequelize db:seed:all",
+    "server-start": "nodemon server.js | bunyan --output short --color",
+    "test": "mocha"
   },
   "dependencies": {
     "axios": "^0.20.0",
     "bluebird": "^3.7.2",
     "bunyan": "^1.8.14",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "construx": "^1.0.1",
     "construx-copier": "^1.0.0",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "eslint": "^7.5.0",
     "express": "^4.17.1",
+    "hashids": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
     "kraken-js": "^2.3.0",
     "lodash": "^4.17.19",
-    "moment": "^2.27.0"
+    "moment": "^2.27.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "nanoid": "^3.1.12",
+    "sequelize": "^6.3.3",
+    "socket.io": "^2.3.0"
   },
   "devDependencies": {
     "mocha": "^8.0.1",
