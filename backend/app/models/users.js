@@ -1,4 +1,6 @@
 const { Sequelize, Model, DataTypes } = require('sequelize');
+const crypto = require('crypto');
+const { secret, iv } = require('../lib/helper');
 
 class User extends Model {
   static associate(models) {}
@@ -29,7 +31,31 @@ User.init(
     },
     ssn: {
       type: DataTypes.TEXT,
-      field: 'address',
+      field: 'ssn',
+      get: function () {
+        try {
+          const decipher = crypto.createDecipheriv('aes-256-gcm', secret, iv, {
+            authTagLength: 16,
+          });
+          return decipher.update(
+            this.getDataValue('ssn').toString(),
+            'base64',
+            'utf8'
+          );
+        } catch (e) {
+          console.log(e);
+          return this.getDataValue('ssn');
+        }
+      },
+      set: function (value) {
+        const cipher = crypto.createCipheriv('aes-256-gcm', secret, iv, {
+          authTagLength: 16,
+        });
+        return this.setDataValue(
+          'ssn',
+          cipher.update(value, 'utf8', 'base64') + cipher.final('base64')
+        );
+      },
     },
     createdAt: {
       type: DataTypes.DATE,

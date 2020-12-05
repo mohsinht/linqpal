@@ -21,7 +21,7 @@
     "authentication": {
       "enabled": true,
       "priority": 100,
-      "route": "\/api\/v1((?!$))((?!\/admin/login))*",
+      "route": "\/api\/v1((?!$))((?!\/admin/login))((?!\/users\/register))*",
       "module": {
         "name": "path:./app/lib/auth"
       }

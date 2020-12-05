@@ -1,10 +1,7 @@
 const db = global.db;
 const { Op } = require('sequelize');
-const constants = require('../../../lib/constants');
 const { encrypt, secret } = require('../../../lib/helper');
 const jwt = require('jsonwebtoken');
-const promise = require('bluebird');
-const jwtVerify = promise.promisify(require('jsonwebtoken').verify);
 
 module.exports = (router) => {
   router.post('/login', async (req, res) => {
