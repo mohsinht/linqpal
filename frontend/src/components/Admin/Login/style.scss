@@ -1,0 +1,37 @@
+.admin-login {
+
+    background: rgba(47,72,88, 1);
+    margin-top: 9rem;
+    box-shadow: 4px 4px 20px #00000052;
+    color: white;
+    max-width: 27rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    .contact-cta {
+        margin-bottom: 1rem;
+    }
+    .row {
+        margin: auto;
+    }
+    .login-form {
+        input {
+            width: 80%;
+            margin: auto;
+            border-radius: 0;
+        }
+        .btn-primary {
+            width: 80%;
+            color: #fff;
+            background-color: #e64b16;
+            text-decoration: none;
+            display: inline-block;
+            -moz-transition: all 0.35s;
+            -o-transition: all 0.35s;
+            -webkit-transition: all 0.35s;
+            transition: all 0.35s;
+            border: none;
+            border-radius: 0;
+        }
+    }
+}

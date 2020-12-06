@@ -1,0 +1,29 @@
+.navbar {
+  position: fixed;
+  z-index: 18;
+  -moz-transform: translateZ(18px);
+  -ms-transform: translateZ(18px);
+  -webkit-transform: translateZ(18px);
+  -o-transform: translateZ(18px);
+  transform: translateZ(18px);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  -moz-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  a {
+    color: rgba(47, 72, 88, 1);
+  }
+  .navbar-light .navbar-brand {
+    color: rgba(47, 72, 88, 1);
+  }
+}

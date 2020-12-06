@@ -1,0 +1,84 @@
+.user-registration {
+    background: rgba(47,72,88, 1);
+    margin-top: 5rem;
+    box-shadow: 4px 4px 20px #00000052;
+    color: white;
+    max-width: 27rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .contact-cta {
+        margin-bottom: 1rem;
+    }
+    .row {
+        margin: auto;
+    }
+    .register-form {
+        input, textarea {
+            width: 100%;
+            margin: auto;
+            border-radius: 0;
+            resize: none;
+            font-size: 0.8rem
+        }
+        .btn-primary {
+            width: 94%;
+            margin: auto;
+            color: #fff;
+            background-color: #e64b16;
+            text-decoration: none;
+            display: inline-block;
+            -moz-transition: all 0.35s;
+            -o-transition: all 0.35s;
+            -webkit-transition: all 0.35s;
+            transition: all 0.35s;
+            border: none;
+            border-radius: 0;
+        }
+        .form-group {
+            margin-bottom: 0.2rem;
+        }
+        .reg-group {
+            text-align: left;
+            label {
+                margin-bottom: 0rem;
+                font-size: 0.6rem;
+            }
+        }
+        .custom-mask {
+            input {
+                display: block;
+                width: 100%;
+                padding: .375rem .75rem;
+                font-size: 0.8rem;
+                line-height: 1.5;
+                color: #495057;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: 0rem;
+                transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                &:focus {
+                    outline: 0;
+                    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+                }
+            }
+        }
+
+    }
+    form.validated {
+        input.invalid, textarea.invalid {
+            border-color: #dc3545;
+            &:focus {
+                border-color: #dc3545;
+                box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+            }
+        }
+        input.valid, textarea.valid {
+            &:focus {
+                border-color: #28a745;
+                box-shadow: 0 0 0 0.2rem rgba(40,167,69,.25);
+            }
+        }
+    }
+}
