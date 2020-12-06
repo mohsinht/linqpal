@@ -12,7 +12,7 @@ const Header = (props: IProps) => {
     const location = useLocation();
     return <>
         <nav id="navbar" className="navbar navbar-light bg-light navbar-fixed-top">
-            <a className="navbar-brand" href="#"><b>Linqpal</b></a>
+            <Link to="/" className="navbar-brand"><b>Linqpal</b></Link>
             <ul className="nav nav-pills">
                 {auth.loginStatus ? <>
                     <li className="nav-item" id="introm">

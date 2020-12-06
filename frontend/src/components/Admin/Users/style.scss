@@ -1,0 +1,25 @@
+.user-data {
+    background: rgba(47,72,88, 1);
+    margin-top: 6rem;
+    box-shadow: 4px 4px 20px #00000052;
+    color: white;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    .contact-cta {
+        margin-bottom: 1rem;
+    }
+    .row {
+        margin: auto;
+    }
+
+    .table-bordered {
+        font-size: 0.8rem;
+        background: white;
+        color: #2f4858;
+        thead {
+            background-color: white;
+            color: #2f4858
+        }
+    }
+}

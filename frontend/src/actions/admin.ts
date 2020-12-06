@@ -1,5 +1,6 @@
 import API from '../config/api';
 import axios from 'axios';
+import IUser from '../interfaces/IUser';
 
 export const login = async (
   username: string,
@@ -21,6 +22,24 @@ export const login = async (
     }
   });
 };
+
+export const fetchUsers = async () : Promise<IUser[]> => {
+    return await new Promise<IUser[]>(async (resolve, reject) => {
+      try {
+        const res = await axios({
+          method: 'get',
+          url: API.ADMIN.USERS,
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('admin_token')}`
+          }
+        })
+        console.log(res.data);
+        resolve(res.data.users);
+      } catch (err) {
+        resolve([]);
+      }
+    });
+}
 
 export const isLoggedIn = () : boolean => {
     const token = localStorage.getItem('admin_token');
